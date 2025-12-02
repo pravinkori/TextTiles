@@ -1,15 +1,14 @@
 import React from "react";
 
 function GuessInput() {
-  const [guess, setGuess] = React.useState("");
+  const [tentativeGuess, setTentativeGuess] = React.useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
 
     // To make debugging easier, we'll log the guess in the console.
-    console.log({ guess });
-
-    setGuess("");
+    console.log({ tentativeGuess });
+    setTentativeGuess("");
   }
 
   return (
@@ -21,10 +20,10 @@ function GuessInput() {
         maxLength={5}
         pattern="[a-zA-Z]{5}"
         title="Enter exactly 5 characters"
-        value={guess}
+        value={tentativeGuess}
         onChange={(event) => {
           const nextGuess = event.target.value.toUpperCase();
-          setGuess(nextGuess);
+          setTentativeGuess(nextGuess);
         }}
         id="guess-input"
         type="text"
