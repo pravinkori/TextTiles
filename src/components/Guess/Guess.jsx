@@ -4,13 +4,13 @@ import { range } from "../../utils/utils";
 import { checkGuess } from "../../utils/game-helpers";
 
 function Cell({ letter, status }) {
-  return <span className={`cell ${status}`}>{letter}</span>;
+  const className = status ? `cell ${status}` : "cell";
+
+  return <span className={className}>{letter}</span>;
 }
 
 function Guess({ value, answer }) {
   const result = checkGuess(value, answer);
-
-  console.log({ result });
 
   return (
     <p className="guess">
