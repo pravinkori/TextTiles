@@ -19,6 +19,7 @@ html {
   --color-gray-900: hsl(0deg 0% 90%);
 
   --font-family-heading: "Limelight", sans-serif;
+  --font-family-body: "Kedebideri", sans-serif;
 
   --fs-400: 1rem;
   --fs-500: 1.5rem;
@@ -42,7 +43,7 @@ html {
   Custom styles
 */
 body {
-  font-family: sans-serif;
+  font-family: var(--font-family-body);
   background-color: var(--color-background);
 }
 
